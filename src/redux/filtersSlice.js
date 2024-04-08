@@ -5,17 +5,17 @@ const slice = createSlice({
   initialState: {
     name: "",
   },
-
   reducers: {
-    aaa(state, action) {
-      state.name += action.payload;
-    },
-    bbb(state, action) {
-      state.name -= action.payload;
+    setFilter: {
+      reducer(state, action) {
+        state.name = action.payload;
+      },
+      prepare(filter) {
+        return { payload: filter };
+      },
     },
   },
 });
 
-export const { aaa, bbb } = slice.actions;
-
+export const { setFilter } = slice.actions;
 export default slice.reducer;

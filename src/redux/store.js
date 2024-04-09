@@ -18,17 +18,6 @@ const rootReducer = combineReducers({
   filters: filtersReducer,
 });
 
-// const filtersPersistConfig = {
-//   key: "filters",
-//   storage,
-//   // whitelist: [""],
-// };
-
-// const persistedFiltersReducer = persistReducer(
-//   filtersPersistConfig,
-//   filtersReducer
-// );
-
 const persistConfig = {
   key: "contacts",
   storage,

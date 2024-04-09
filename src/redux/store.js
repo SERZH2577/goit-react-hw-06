@@ -13,10 +13,10 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import filtersReducer from "./filtersSlice";
 import contactsReducer from "./contactsSlice";
 
-const rootReducer = combineReducers({
-  items: contactsReducer,
-  filters: filtersReducer,
-});
+// const rootReducer = combineReducers({
+//   items: contactsReducer,
+//   filters: filtersReducer,
+// });
 
 const persistConfig = {
   key: "contacts",
@@ -24,10 +24,13 @@ const persistConfig = {
   whitelist: ["items"],
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, contactsReducer);
 
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: {
+    contacts: persistedReducer,
+    filters: filtersReducer,
+  },
 
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

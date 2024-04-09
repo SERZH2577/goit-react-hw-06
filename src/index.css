@@ -21,9 +21,6 @@ button {
   color: #ffffff;
   background-color: #ed2828;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-
   transition: 100ms;
 }
 button:hover,

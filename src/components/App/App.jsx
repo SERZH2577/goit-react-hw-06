@@ -5,8 +5,8 @@ import css from "./App.module.css";
 
 export default function App() {
   return (
-    <div>
-      <h1 className={css.title}>Phonebook</h1>
+    <div className={css.section}>
+      <h1 className={css.title}>PHONEBOOK</h1>
       <ContactForm />
       <SearchBox />
       <ContactList />

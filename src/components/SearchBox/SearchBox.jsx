@@ -1,8 +1,6 @@
 import { nanoid } from "nanoid";
-// import { Formik, Field } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter, getFilters } from "../../redux/filtersSlice";
-// import { getFilters } from "../../redux/selectors";
 import css from "./SearchBox.module.css";
 
 export default function SearchBox() {

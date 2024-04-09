@@ -9,14 +9,9 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import filtersReducer from "./filtersSlice";
 import contactsReducer from "./contactsSlice";
-
-// const rootReducer = combineReducers({
-//   items: contactsReducer,
-//   filters: filtersReducer,
-// });
 
 const persistConfig = {
   key: "contacts",
